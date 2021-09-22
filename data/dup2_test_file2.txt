@@ -1,0 +1,9 @@
+zhangfei
+zhangfei
+shanghai
+beijing
+jiangsu
+hello world
+stdin
+stdout
+i love c++
