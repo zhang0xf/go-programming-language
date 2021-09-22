@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter2"
+	"exercise/chapter3"
 	"fmt"
 )
 
@@ -18,5 +18,8 @@ func main() {
 	// chapter2
 	// chapter2.DupByStdin()
 	// chapter2.DupByFilesInStreamMode()
-	chapter2.DupByFilesOneTimeRead()
+	// chapter2.DupByFilesOneTimeRead()
+
+	// chapter3
+	chapter3.DrawGIFByImage()
 }
