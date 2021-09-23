@@ -1,5 +1,8 @@
 // Lissajous generates GIF animations of random Lissajous figures.
-package chapter3
+
+// Usage: ./execise > ./data/output.gif
+
+package chapter1_4
 
 import (
 	"image"

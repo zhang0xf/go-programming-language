@@ -3,7 +3,7 @@
 
 // Useage : ./exercise ./data/dup2_test_file1.txt ./data/dup2_test_file2.txt
 
-package chapter2
+package chapter1_3
 
 import (
 	"bufio"

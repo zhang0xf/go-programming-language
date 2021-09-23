@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter3"
+	"exercise/chapter1_4"
 	"fmt"
 )
 
@@ -9,17 +9,17 @@ func main() {
 	// hello world
 	fmt.Println("Hello, World!")
 
-	// chapter1
-	// chapter1.PrintArgsByFor()
-	// chapter1.PrintArgsByRange()
-	// chapter1.PrintArgsByJoin()
-	// chapter1.PrintArgsDefault()
+	// chapter1_2
+	// chapter1_2.PrintArgsByFor()
+	// chapter1_2.PrintArgsByRange()
+	// chapter1_2.PrintArgsByJoin()
+	// chapter1_2.PrintArgsDefault()
 
-	// chapter2
-	// chapter2.DupByStdin()
-	// chapter2.DupByFilesInStreamMode()
-	// chapter2.DupByFilesOneTimeRead()
+	// chapter1_3
+	// chapter1_3.DupByStdin()
+	// chapter1_3.DupByFilesInStreamMode()
+	// chapter1_3.DupByFilesOneTimeRead()
 
-	// chapter3
-	chapter3.DrawGIFByImage()
+	// chapter1_4
+	chapter1_4.DrawGIFByImage()
 }
