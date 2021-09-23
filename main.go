@@ -31,5 +31,7 @@ func main() {
 
 	// chapter1_7
 	// chapter1_7.WebServer()
-	chapter1_7.WebServerAndCount()
+	// chapter1_7.WebServerAndCount()
+	// chapter1_7.WebServerMoreDetail()
+	chapter1_7.WebServerWithLissajous()
 }

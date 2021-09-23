@@ -30,6 +30,10 @@ func DrawGIFByImage() {
 	lissajous(os.Stdout)
 }
 
+func Lissajous(out io.Writer) {
+	lissajous(out)
+}
+
 func lissajous(out io.Writer) {
 	const (
 		cycles  = 5     // number of complete x oscillator revolutions
