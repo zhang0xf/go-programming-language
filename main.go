@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter1_5"
+	"exercise/chapter1_6"
 	"fmt"
 )
 
@@ -24,5 +24,8 @@ func main() {
 	// chapter1_4.DrawGIFByImage()
 
 	// chapter1_5
-	chapter1_5.GetUrlByHttp()
+	// chapter1_5.FetchUrl()
+
+	// chapter1_6
+	chapter1_6.FetchAllUrl()
 }
