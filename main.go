@@ -30,5 +30,6 @@ func main() {
 	// chapter1_6.FetchAllUrl()
 
 	// chapter1_7
-	chapter1_7.WebServer()
+	// chapter1_7.WebServer()
+	chapter1_7.WebServerAndCount()
 }
