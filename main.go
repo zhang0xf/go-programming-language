@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter1_6"
+	"exercise/chapter1_7"
 	"fmt"
 )
 
@@ -27,5 +27,8 @@ func main() {
 	// chapter1_5.FetchUrl()
 
 	// chapter1_6
-	chapter1_6.FetchAllUrl()
+	// chapter1_6.FetchAllUrl()
+
+	// chapter1_7
+	chapter1_7.WebServer()
 }

@@ -1,4 +1,7 @@
 // Fetchall fetches URLs in parallel and reports their times and sizes.
+
+// usage : ./exercise http://www.baidu.com
+
 package chapter1_6
 
 import (
