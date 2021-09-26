@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter1_7"
+	"exercise/chapter2_3"
 	"fmt"
 )
 
@@ -33,5 +33,8 @@ func main() {
 	// chapter1_7.WebServer()
 	// chapter1_7.WebServerAndCount()
 	// chapter1_7.WebServerMoreDetail()
-	chapter1_7.WebServerWithLissajous()
+	// chapter1_7.WebServerWithLissajous()
+
+	// chapter2_3
+	chapter2_3.EchoAtgs()
 }
