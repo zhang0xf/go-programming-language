@@ -4,7 +4,8 @@
 
 // 类型转换改变了语义(编译器:语义规则,语法分析)
 
-package tempconv
+// package tempconv
+package chapter2_5
 
 import "fmt"
 
@@ -21,6 +22,8 @@ func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
 
 func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
 
+func (c Celsius) String() string { return fmt.Sprintf("%g°C", c) }
+
 func TypeTest() {
 
 	// 内置运算
@@ -36,4 +39,12 @@ func TypeTest() {
 	fmt.Println(f >= 0)          // "true"
 	fmt.Println(c == Celsius(f)) // "true"!
 	// fmt.Println(c == f)          // compile error: type mismatch
+
+	c2 := FToC(212.0)
+	fmt.Println(c2.String()) // "100°C"
+	fmt.Printf("%v\n", c2)   // "100°C"; no need to call String explicitly
+	fmt.Printf("%s\n", c2)   // "100°C"
+	fmt.Println(c2)          // "100°C"
+	fmt.Printf("%g\n", c2)   // "100"; does not call String
+	fmt.Println(float64(c2)) // "100"; does not call String
 }
