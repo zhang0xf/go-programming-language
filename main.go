@@ -42,5 +42,6 @@ func main() {
 	// chapter2_5.TypeTest()
 
 	// chapter2_6
-	chapter2_6.ImportPackageTest()
+	// chapter2_6.ImportPackageTest()
+	fmt.Printf("%d\n", chapter2_6.PopCount(3))
 }
