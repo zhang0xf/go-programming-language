@@ -1,4 +1,7 @@
 // Echo4 prints its command-line arguments.
+
+// Usage : ./exercise -s / zhangfei haha test
+
 package chapter2_3
 
 import (
