@@ -40,6 +40,10 @@ func TypeTest() {
 	fmt.Println(c == Celsius(f)) // "true"!
 	// fmt.Println(c == f)          // compile error: type mismatch
 
+	// %g:浮点数
+	// %s:字符串
+	// %v:自然形式
+
 	c2 := FToC(212.0)
 	fmt.Println(c2.String()) // "100°C"
 	fmt.Printf("%v\n", c2)   // "100°C"; no need to call String explicitly

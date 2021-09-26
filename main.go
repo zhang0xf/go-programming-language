@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter2_5"
+	"exercise/chapter2_6"
 	"fmt"
 )
 
@@ -39,5 +39,8 @@ func main() {
 	// chapter2_3.EchoAtgs()
 
 	// chapter2_5
-	chapter2_5.TypeTest()
+	// chapter2_5.TypeTest()
+
+	// chapter2_6
+	chapter2_6.ImportPackageTest()
 }
