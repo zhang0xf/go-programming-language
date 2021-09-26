@@ -30,6 +30,7 @@ func DrawGIFByImage() {
 	lissajous(os.Stdout)
 }
 
+// 名字开头字母的大小写决定了名字在包外的是否可见
 func Lissajous(out io.Writer) {
 	lissajous(out)
 }
