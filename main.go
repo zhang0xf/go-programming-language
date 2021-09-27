@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter2_6"
+	"exercise/chapter3_1"
 	"fmt"
 )
 
@@ -43,5 +43,8 @@ func main() {
 
 	// chapter2_6
 	// chapter2_6.ImportPackageTest()
-	fmt.Printf("%d\n", chapter2_6.PopCount(3))
+	// fmt.Printf("%d\n", chapter2_6.PopCount(3))
+
+	// chapter3_1
+	chapter3_1.BitOperation()
 }
