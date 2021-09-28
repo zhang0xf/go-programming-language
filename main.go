@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter3_1"
+	"exercise/chapter3_2"
 	"fmt"
 )
 
@@ -46,5 +46,9 @@ func main() {
 	// fmt.Printf("%d\n", chapter2_6.PopCount(3))
 
 	// chapter3_1
-	chapter3_1.BitOperation()
+	// chapter3_1.BitOperation()
+
+	// chapter3_2
+	// chapter3_2.SVGSurface()
+	chapter3_2.WebServerWithSVGSurface()
 }
