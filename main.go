@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter3_2"
+	"exercise/chapter3_3"
 	"fmt"
 )
 
@@ -50,5 +50,8 @@ func main() {
 
 	// chapter3_2
 	// chapter3_2.SVGSurface()
-	chapter3_2.WebServerWithSVGSurface()
+	// chapter3_2.WebServerWithSVGSurface()
+
+	// chapter3_3
+	chapter3_3.ComplexSample()
 }

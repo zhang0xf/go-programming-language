@@ -82,16 +82,15 @@ func init() {
 	if err != nil {
 		log.Fatalf("os.Getwd failed: %v", err)
 	}
-	// 使用cwd去掉compile error,但是全局变量并不会被正确地初始化,好在vscode会有提示,否则看似正常的日志输出会使得这个bug更加隐晦!
-	log.Printf("Working directory = %s", cwd) // 去掉这句试试
+	// 全局变量cwd并不会被正确地初始化,看似正常的日志输出会使得这个bug更加隐晦!
+	log.Printf("Working directory = %s", cwd)
 }
 
-// 避免上述隐晦bug的方式:单独申明err,以防止:=的简短申明方式
 func init() {
+	// 单独申明err,以防止:=的简短申明方式
 	var err error
 	cwd, err = os.Getwd()
 	if err != nil {
 		log.Fatalf("os.Getwd failed: %v", err)
 	}
-	// 这里不打印cwd(使用cwd),是为了凸显上面的错误!
 }
