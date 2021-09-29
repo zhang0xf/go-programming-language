@@ -1,4 +1,4 @@
 *.exe
 exercise
 *.gif
-*.html
+#*.html

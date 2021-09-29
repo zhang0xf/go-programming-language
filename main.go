@@ -53,5 +53,6 @@ func main() {
 	// chapter3_2.WebServerWithSVGSurface()
 
 	// chapter3_3
-	chapter3_3.ComplexSample()
+	// chapter3_3.ComplexSample()
+	chapter3_3.DrawMandelbrot()
 }
