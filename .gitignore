@@ -1,4 +1,7 @@
-*.exe
+# ignore files
 exercise
+*.exe
 *.gif
-#*.html
+*.html
+*.png
+*.PNG
