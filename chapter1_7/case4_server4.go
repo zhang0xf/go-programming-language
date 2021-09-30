@@ -6,10 +6,10 @@ import (
 	"net/http"
 )
 
-func WebServerWithLissajous() {
-	HandlerRequestAndLissajous := func(w http.ResponseWriter, r *http.Request) {
+func LissajousWebServer() {
+	HandlerLissajousRequest := func(w http.ResponseWriter, r *http.Request) {
 		chapter1_4.Lissajous(w)
 	}
-	http.HandleFunc("/", HandlerRequestAndLissajous)
+	http.HandleFunc("/", HandlerLissajousRequest)
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }

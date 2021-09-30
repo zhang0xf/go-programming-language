@@ -31,9 +31,9 @@ func main() {
 
 	// chapter1_7
 	// chapter1_7.WebServer()
-	// chapter1_7.WebServerAndCount()
+	// chapter1_7.CountWebServer()
 	// chapter1_7.WebServerMoreDetail()
-	// chapter1_7.WebServerWithLissajous()
+	// chapter1_7.LissajousWebServer()
 
 	// chapter2_3
 	// chapter2_3.EchoAtgs()
@@ -50,9 +50,10 @@ func main() {
 
 	// chapter3_2
 	// chapter3_2.SVGSurface()
-	// chapter3_2.WebServerWithSVGSurface()
+	// chapter3_2.SVGSurfaceWebServer()
 
 	// chapter3_3
 	// chapter3_3.ComplexSample()
-	chapter3_3.DrawMandelbrot()
+	// chapter3_3.DrawMandelbrot()
+	chapter3_3.MandelbrotWebServer()
 }

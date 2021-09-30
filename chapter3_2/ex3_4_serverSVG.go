@@ -7,11 +7,11 @@ import (
 	"net/http"
 )
 
-func WebServerWithSVGSurface() {
-	HandlerRequestAndSVG := func(w http.ResponseWriter, r *http.Request) {
+func SVGSurfaceWebServer() {
+	HandlerSVGRequest := func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "image/svg+xml")
 		SVGSurfaceWeb(w)
 	}
-	http.HandleFunc("/", HandlerRequestAndSVG)
+	http.HandleFunc("/", HandlerSVGRequest)
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
