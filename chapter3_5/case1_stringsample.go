@@ -44,7 +44,7 @@ func StringSample() {
 
 	fmt.Println(GoUsage)
 
-	f, err := os.Create("./data/stringSample.txt")
+	f, err := os.Create("./data/string_sample.txt")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Create stringSample.txt error: %v\n", err)
 	}

@@ -1,7 +1,7 @@
 // Dup2 prints the count and text of lines that appear more than once
 // in the input.  It reads from stdin or from a list of named files.
 
-// Useage : ./exercise ./data/dup2_test_file1.txt ./data/dup2_test_file2.txt
+// Useage : ./exercise ./data/dup2_file1.txt ./data/dup2_file2.txt
 
 package chapter1_3
 
