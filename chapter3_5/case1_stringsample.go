@@ -1,6 +1,9 @@
 package chapter3_5
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func StringSample() {
 	s := "hello, world"
@@ -23,4 +26,32 @@ func StringSample() {
 	fmt.Println(t1) // "left foot"
 	// s1[0] = 'L'     // compile error: cannot assign to s[0]
 
+	// 转义序列测试
+	escapeString := "hello\n\"world"
+	// escapeString2 := "hello\n
+	// world"	// compile error
+	fmt.Println(escapeString)
+
+	// 原生字符串测试
+	nativeString := `hello\n\'world`
+	fmt.Println(nativeString)
+
+	const GoUsage = `Go is a tool for managing Go source code.
+
+	Usage:
+    	go command [arguments]
+	...`
+
+	fmt.Println(GoUsage)
+
+	f, err := os.Create("./data/stringSample.txt")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Create stringSample.txt error: %v\n", err)
+	}
+	defer f.Close()
+	var str = []byte(GoUsage)
+	f.Write(str)
+
+	var nativeString2 = `hello\n\'world` + "`" + `反引号的转义`
+	fmt.Println(nativeString2)
 }

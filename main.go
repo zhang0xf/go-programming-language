@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter3_3"
+	"exercise/chapter3_5"
 	"fmt"
 )
 
@@ -55,5 +55,8 @@ func main() {
 	// chapter3_3
 	// chapter3_3.ComplexSample()
 	// chapter3_3.DrawMandelbrot()
-	chapter3_3.MandelbrotWebServer()
+	// chapter3_3.MandelbrotWebServer()
+
+	// chapter3_5
+	chapter3_5.StringSample()
 }
