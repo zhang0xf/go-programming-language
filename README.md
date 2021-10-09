@@ -21,3 +21,11 @@ go env -w GOPROXY=https://goproxy.io,direct
 ### init mod as "exercise"
 
 `go mod init exercise`
+
+### build project
+
+`go build`
+
+### clean 
+
+`go clean`
