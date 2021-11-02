@@ -58,5 +58,12 @@ func main() {
 	// chapter3_3.MandelbrotWebServer()
 
 	// chapter3_5
-	chapter3_5.StringSample()
+	// chapter3_5.StringSample()
+	// chapter3_5.Utf8Sample()
+	// chapter3_5.RuneSample()
+	// chapter3_5.BaseName1()
+	// chapter3_5.BaseName2()
+	// chapter3_5.Comma()
+	// chapter3_5.PrintInts()
+	chapter3_5.StrConv()
 }
