@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter3_6"
+	"exercise/chapter4_1"
 	"fmt"
 )
 
@@ -68,6 +68,10 @@ func main() {
 	// chapter3_5.StrConv()
 
 	// chapter3_6
-	chapter3_6.Const()
+	// chapter3_6.Const()
 	// chapter3_6.NetFlag()
+
+	// chapter4_1
+	// chapter4_1.Array()
+	chapter4_1.Sha256()
 }
