@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter4_1"
+	"exercise/chapter4_2"
 	"fmt"
 )
 
@@ -73,5 +73,9 @@ func main() {
 
 	// chapter4_1
 	// chapter4_1.Array()
-	chapter4_1.Sha256()
+	// chapter4_1.Sha256()
+
+	// chapter4_2
+	// chapter4_2.Slice()
+	chapter4_2.Rev2()
 }
