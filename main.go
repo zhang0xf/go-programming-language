@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter4_2"
+	"exercise/chapter4_3"
 	"fmt"
 )
 
@@ -81,5 +81,8 @@ func main() {
 	// chapter4_2.AppendRune()
 	// chapter4_2.AppendInt()
 	// chapter4_2.Nonempty()
-	chapter4_2.Remove1()
+	// chapter4_2.Remove1()
+
+	// chapter4_3
+	chapter4_3.CharCount()
 }
