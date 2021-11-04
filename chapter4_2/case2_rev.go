@@ -22,17 +22,6 @@ func Rev2() {
 	reverse(s[:2])
 	reverse(s[2:])
 	reverse(s)
+	reverse(nil)   // 合法
 	fmt.Println(s) // "[2 3 4 5 0 1]"
-}
-
-func equal(x, y []string) bool {
-	if len(x) != len(y) {
-		return false
-	}
-	for i := range x {
-		if x[i] != y[i] {
-			return false
-		}
-	}
-	return true
 }
