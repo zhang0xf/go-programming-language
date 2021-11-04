@@ -77,5 +77,7 @@ func main() {
 
 	// chapter4_2
 	// chapter4_2.Slice()
-	chapter4_2.Rev2()
+	// chapter4_2.Rev2()
+	// chapter4_2.AppendRune()
+	chapter4_2.AppendInt()
 }
