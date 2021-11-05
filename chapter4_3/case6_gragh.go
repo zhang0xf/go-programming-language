@@ -6,7 +6,7 @@ package chapter4_3
 
 var graph = make(map[string]map[string]bool)
 
-// ddEdge函数惰性初始化map是一个惯用方式，也就是说在每个值首次作为key时才初始化。
+// addEdge函数惰性初始化map是一个惯用方式，也就是说在每个值首次作为key时才初始化。
 func addEdge(from, to string) {
 	edges := graph[from]
 	if edges == nil {
