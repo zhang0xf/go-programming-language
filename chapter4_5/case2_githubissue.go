@@ -1,6 +1,6 @@
 // Package github provides a Go API for the GitHub issue tracker.
 // See https://developer.github.com/v3/search/#search-issues.
-package chapter4_4
+package chapter4_5
 
 import (
 	"encoding/json"
