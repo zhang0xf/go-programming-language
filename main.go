@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter4_3"
+	"exercise/chapter4_4"
 	"fmt"
 )
 
@@ -84,5 +84,11 @@ func main() {
 	// chapter4_2.Remove1()
 
 	// chapter4_3
-	chapter4_3.CharCount()
+	// chapter4_3.CharCount()
+
+	// chapter4_4
+	// chapter4_4.JsonMarshaling()
+	// chapter4_4.JsonMarshalIndent()
+	// chapter4_4.JsonUnMarshaling(chapter4_4.JsonMarshaling())
+	chapter4_4.GithubSearchIssues()
 }
