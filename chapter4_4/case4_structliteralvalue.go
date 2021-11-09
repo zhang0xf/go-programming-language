@@ -5,11 +5,11 @@ import (
 	"image/gif"
 )
 
+// 结构体字面值
 type Point struct{ X, Y int }
 
-// 结构体字面值
-
 func StrutLiteralValue() {
+
 	p := Point{1, 2}
 	fmt.Printf("%T", p)
 

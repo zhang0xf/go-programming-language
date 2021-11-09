@@ -2,16 +2,17 @@ package chapter4_4
 
 // 结构体嵌入
 
-type Circle struct {
-	X, Y, Radius int
-}
-
-type Wheel struct {
-	X, Y, Radius, Spokes int
-}
-
 func StructEmbed() {
-	var w1 Wheel
+
+	type _Circle struct {
+		X, Y, Radius int
+	}
+
+	type _Wheel struct {
+		X, Y, Radius, Spokes int
+	}
+
+	var w1 _Wheel
 	w1.X = 8
 	w1.Y = 8
 	w1.Radius = 5
