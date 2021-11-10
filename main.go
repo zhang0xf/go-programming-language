@@ -1,6 +1,8 @@
 package main
 
-import "exercise/chapter5_1"
+import (
+	"exercise/chapter5_3"
+)
 
 func main() {
 	// hello world
@@ -96,7 +98,12 @@ func main() {
 
 	// chapter5_1
 	// chapter5_1.Function()
+
+	// chapter5_2
 	// chapter1_5.FetchUrl()
-	// chapter5_1.FuncRecursion()
-	chapter5_1.Outline()
+	// chapter5_2.FindLinks1()
+	// chapter5_2.Outline()
+
+	// chapter5_3
+	chapter5_3.FindLinks2()
 }

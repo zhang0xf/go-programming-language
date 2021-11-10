@@ -1,4 +1,4 @@
-package chapter5_1
+package chapter5_2
 
 import (
 	"fmt"
@@ -35,7 +35,7 @@ func visit(links []string, n *html.Node) []string {
 }
 
 // 函数解析HTML标准输入，通过递归函数visit获得links（链接），并打印出这些links：
-func FuncRecursion() {
+func FindLinks1() {
 	doc, err := html.Parse(os.Stdin)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "findlinks1: %v\n", err)
