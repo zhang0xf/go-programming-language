@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter4_5"
+	"exercise/chapter4_6"
 	"fmt"
 )
 
@@ -90,5 +90,8 @@ func main() {
 	// chapter4_5.JsonMarshaling()
 	// chapter4_5.JsonMarshalIndent()
 	// chapter4_5.JsonUnMarshaling(chapter4_4.JsonMarshaling())
-	chapter4_5.GithubSearchIssues()
+	// chapter4_5.GithubSearchIssues()
+
+	// chapter4_6
+	chapter4_6.Template()
 }
