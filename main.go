@@ -97,5 +97,6 @@ func main() {
 	// chapter5_1
 	// chapter5_1.Function()
 	// chapter1_5.FetchUrl()
-	chapter5_1.FuncRecursion()
+	// chapter5_1.FuncRecursion()
+	chapter5_1.Outline()
 }
