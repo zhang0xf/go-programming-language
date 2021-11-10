@@ -7,6 +7,12 @@ import (
 	"golang.org/x/net/html"
 )
 
+// usage :
+// 1. 编译chapter1_5.FetchUrl()
+// 2. 执行./exercise http://www.baidu.com  > data/content
+// 3. 编译chapter5_2.Outline()
+// 4. 执行./exercise < data/content
+
 // !!当outline调用自身时，被调用者接收的是stack的拷贝。
 // 被调用者对stack的元素追加操作，修改的是stack的拷贝,但这个过程并不会修改调用方的stack。(即:父节点和每一个子节点拼接)
 func outline(stack []string, n *html.Node) {

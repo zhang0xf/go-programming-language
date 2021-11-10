@@ -16,7 +16,7 @@ import (
 // usage :
 // 1. 编译chapter1_5.FetchUrl()
 // 2. 执行./exercise http://www.baidu.com  > data/content
-// 3. 编译chapter5_1.FuncRecursion()
+// 3. 编译chapter5_2.FindLinks1()
 // 4. 执行./exercise < data/content
 
 // visit appends to links each link found in n and returns the result.
