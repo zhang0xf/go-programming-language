@@ -27,7 +27,7 @@ func daysAgo(t time.Time) int {
 
 // 生成模板的输出需要两个处理步骤。第一步是要分析模板并转为内部表示，然后基于指定的输入执行模板。
 // 注意方法调用链的顺序：template.New先创建并返回一个模板；Funcs方法将daysAgo等自定义函数注册到模板中，并返回模板；最后调用Parse函数分析模板。
-func Template() {
+func TextTemplate() {
 	report1, err := template.New("report").
 		Funcs(template.FuncMap{"daysAgo": daysAgo}).
 		Parse(templ)

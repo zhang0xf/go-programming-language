@@ -93,5 +93,6 @@ func main() {
 	// chapter4_5.GithubSearchIssues()
 
 	// chapter4_6
-	chapter4_6.Template()
+	// chapter4_6.TextTemplate()
+	chapter4_6.HtmlTemplate()
 }
