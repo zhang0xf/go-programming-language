@@ -94,5 +94,6 @@ func main() {
 
 	// chapter4_6
 	// chapter4_6.TextTemplate()
-	chapter4_6.HtmlTemplate()
+	// chapter4_6.HtmlTemplate()
+	chapter4_6.AutoEscape()
 }
