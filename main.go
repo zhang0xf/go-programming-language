@@ -1,13 +1,10 @@
 package main
 
-import (
-	"exercise/chapter4_6"
-	"fmt"
-)
+import "exercise/chapter5_1"
 
 func main() {
 	// hello world
-	fmt.Println("Hello, World!")
+	// fmt.Println("Hello, World!")
 
 	// chapter1_2
 	// chapter1_2.PrintArgsByFor()
@@ -95,5 +92,10 @@ func main() {
 	// chapter4_6
 	// chapter4_6.TextTemplate()
 	// chapter4_6.HtmlTemplate()
-	chapter4_6.AutoEscape()
+	// chapter4_6.AutoEscape()
+
+	// chapter5_1
+	// chapter5_1.Function()
+	// chapter1_5.FetchUrl()
+	chapter5_1.FuncRecursion()
 }
