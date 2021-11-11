@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter5_5"
+	"exercise/chapter5_6"
 )
 
 func main() {
@@ -111,5 +111,8 @@ func main() {
 	// chapter5_4.FunctionExit()
 
 	// chapter5_5
-	chapter5_5.Outline2()
+	// chapter5_5.Outline2()
+
+	// chapter5_6
+	chapter5_6.Squares()
 }
