@@ -22,6 +22,9 @@ go env -w GOPROXY=https://goproxy.io,direct
 
 `go mod init exercise`
 
+### install libraries
+`go get -u golang.org/x/net`
+
 ### build project
 
 `go build`
