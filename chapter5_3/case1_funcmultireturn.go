@@ -62,9 +62,9 @@ func visit(links []string, n *html.Node) []string {
 }
 
 // 准确的变量名可以传达函数返回值的含义。尤其在返回值的类型都相同时:
-func Size(rect image.Rectangle) (width, height int)
-func Split(path string) (dir, file string)
-func HourMinSec(t time.Time) (hour, minute, second int)
+func Size(rect image.Rectangle) (width, height int)     { return 0, 0 }
+func Split(path string) (dir, file string)              { return "", "" }
+func HourMinSec(t time.Time) (hour, minute, second int) { return 0, 0, 0 }
 
 // 如果一个函数所有的返回值都有显式的变量名，那么该函数的return语句可以省略操作数。这称之为bare return。不宜过度使用bare return。(代码晦涩)
 // CountWordsAndImages does an HTTP GET request for the HTML
