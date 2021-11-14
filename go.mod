@@ -2,4 +2,4 @@ module exercise
 
 go 1.17
 
-require golang.org/x/net v0.0.0-20211109214657-ef0fda0de508 // indirect
+require golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
