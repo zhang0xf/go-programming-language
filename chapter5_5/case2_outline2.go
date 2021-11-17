@@ -10,7 +10,7 @@ import (
 // usage :
 // 1. 编译chapter1_5.FetchUrl()
 // 2. 执行./exercise http://www.baidu.com  > data/content
-// 3. 编译chapter5_2.Outline()
+// 3. 编译chapter5_6.Outline2()
 // 4. 执行./exercise < data/content
 
 // forEachNode针对每个结点x,都会调用pre(x)和post(x)。
