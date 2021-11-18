@@ -114,5 +114,6 @@ func main() {
 	// chapter5_6
 	// chapter5_6.Squares()
 	// chapter5_6.TopoSort()
-	chapter5_6.Links()
+	// chapter5_6.Links()
+	chapter5_6.FindLinks3()
 }
