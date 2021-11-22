@@ -120,5 +120,6 @@ func main() {
 	// chapter5_6.FindLinks3()
 
 	// chapter5_8
-	chapter5_8.Title1()
+	// chapter5_8.Title1()
+	chapter5_8.Fetch()
 }
