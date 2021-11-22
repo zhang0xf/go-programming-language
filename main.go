@@ -1,6 +1,8 @@
 package main
 
-import "exercise/chapter5_6"
+import (
+	"exercise/chapter5_8"
+)
 
 func main() {
 	// hello world
@@ -115,5 +117,8 @@ func main() {
 	// chapter5_6.Squares()
 	// chapter5_6.TopoSort()
 	// chapter5_6.Links()
-	chapter5_6.FindLinks3()
+	// chapter5_6.FindLinks3()
+
+	// chapter5_8
+	chapter5_8.Title1()
 }
