@@ -7,7 +7,7 @@ import (
 
 type Point struct{ X, Y float64 }
 
-// traditional function
+// traditional function (包级函数)
 func Distance(p, q Point) float64 {
 	return math.Hypot(q.X-p.X, q.Y-p.Y)
 }
@@ -48,6 +48,7 @@ func (path Path) Distance() float64 {
 
 // 包级函数
 func PathDistance(path Path) float64 {
+	// 略
 	return 0
 }
 
