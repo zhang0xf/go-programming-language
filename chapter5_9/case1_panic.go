@@ -21,16 +21,16 @@ func Panic() {
 	}
 }
 
-type Buffer struct {
-	elements []int
-}
-
 // 断言函数必须满足的前置条件是明智的做法，但这很容易被滥用。除非你能提供更多的错误信息，或者能更快速的发现错误，否则不需要使用断言，编译器在运行时会帮你检查代码。
 func Reset(x *Buffer) {
 	if x == nil {
 		panic("x is nil") // unnecessary!
 	}
 	x.elements = nil
+}
+
+type Buffer struct {
+	elements []int
 }
 
 // 由于panic会引起程序的崩溃，因此panic一般用于严重错误，如程序内部的逻辑不一致。
