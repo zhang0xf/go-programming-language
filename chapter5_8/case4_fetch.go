@@ -13,7 +13,8 @@ import (
 // 下面的代码是fetch（1.5节）的改进版，我们将http响应信息写入本地文件而不是从标准输出流输出。我们通过path.Base提出url路径的最后一段作为文件名。
 
 func Fetch() {
-	if filename, n, err := fetch("http://www.baidu.com"); err != nil {
+	url := "http://www.baidu.com"
+	if filename, n, err := fetch(url); err != nil {
 		fmt.Printf("write file %s has err : %s.\n", filename, err.Error())
 	} else {
 		fmt.Printf("write file %s success, write bytes : %d\n", filename, n)
