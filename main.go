@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter5_10"
+	"exercise/chapter6_1_1"
 )
 
 func main() {
@@ -127,5 +127,9 @@ func main() {
 	// chapter5_9.PrintStack()
 
 	// chapter5_10
-	chapter5_10.SoleTitle()
+	// chapter5_10.SoleTitle()
+
+	// chapter6_1
+	// chapter6_1.Geometry()
+	chapter6_1_1.OutGeometry()
 }
