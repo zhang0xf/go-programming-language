@@ -10,14 +10,6 @@ import (
 
 type Point struct{ X, Y float64 }
 
-// 我们将Point这个类型嵌入到ColoredPoint来提供X和Y这两个字段。
-// 像我们在4.4节中看到的那样，内嵌可以使我们在定义ColoredPoint时得到一种句法上的简写形式
-// 我们可以直接认为通过嵌入的字段就是ColoredPoint自身的字段，而完全不需要在调用时指出Point
-type ColoredPoint struct {
-	Point
-	Color color.RGBA
-}
-
 func (p Point) Distance(q Point) float64 {
 	return math.Hypot(q.X-p.X, q.Y-p.Y)
 }
@@ -25,6 +17,14 @@ func (p Point) Distance(q Point) float64 {
 func (p *Point) ScaleBy(factor float64) {
 	p.X *= factor
 	p.Y *= factor
+}
+
+// 我们将Point这个类型嵌入到ColoredPoint来提供X和Y这两个字段。
+// 像我们在4.4节中看到的那样，内嵌可以使我们在定义ColoredPoint时得到一种句法上的简写形式
+// 我们可以直接认为通过嵌入的字段就是ColoredPoint自身的字段，而完全不需要在调用时指出Point
+type ColoredPoint struct {
+	Point
+	Color color.RGBA
 }
 
 // 访问字段

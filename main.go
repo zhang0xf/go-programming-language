@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter6_1_1"
+	"exercise/chapter6_4"
 )
 
 func main() {
@@ -131,5 +131,8 @@ func main() {
 
 	// chapter6_1
 	// chapter6_1.Geometry()
-	chapter6_1_1.OutGeometry()
+	// chapter6_1_1.OutGeometry()
+
+	// chapter6_4
+	chapter6_4.MethodExp()
 }
