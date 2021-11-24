@@ -11,6 +11,7 @@ import (
 
 type Point struct{ X, Y float64 }
 
+// 注:为什么Distance()方法和ScaleBy()方法一个是指针一个可以不是指针? 因为ScaleBy()方法需要改变原始变量的值,而Distance()方法使用拷贝对象即可计算出距离!
 func (p *Point) ScaleBy(factor float64) {
 	p.X *= factor
 	p.Y *= factor
