@@ -2,6 +2,8 @@ package chapter7_1
 
 import "fmt"
 
+// 接口实践
+
 type ByteCounter int
 
 func (c *ByteCounter) Write(p []byte) (int, error) {
