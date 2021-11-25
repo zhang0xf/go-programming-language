@@ -13,11 +13,10 @@ func InterfaceDetail3() {
 	// 下面的定义在编译期断言一个*bytes.Buffer的值实现了io.Writer接口类型:
 	// *bytes.Buffer must satisfy io.Writer
 	var w io.Writer = new(bytes.Buffer)
-	// 类似:C++中,基类(纯虚类/接口类)指针指向子类对象?但又有区别!
-	fmt.Printf("%T", w)
 
 	// 因为任意*bytes.Buffer的值，甚至包括nil通过(*bytes.Buffer)(nil)进行显示的转换都实现了这个接口，所以我们不必分配一个新的变量。
 	// 并且因为我们绝不会引用变量w，我们可以使用空标识符来进行代替。
 	// *bytes.Buffer must satisfy io.Writer
 	var _ io.Writer = (*bytes.Buffer)(nil)
+	fmt.Printf("%T", w)
 }
