@@ -26,6 +26,7 @@ func ImplementInterface() {
 	fmt.Printf("%T", w)
 	fmt.Printf("%T", rwc)
 
+	// 这个规则甚至适用于等式右边本身也是一个接口类型
 	w = rwc // OK: io.ReadWriteCloser has Write method
 	// rwc = w // compile error: io.Writer lacks Close method
 
