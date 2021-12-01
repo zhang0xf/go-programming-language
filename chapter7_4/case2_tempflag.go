@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+// flag.Value接口
+
 // usgae : ./exercise
 //         ./exercise -temp 18C
 //         ./exercise -temp 212F
