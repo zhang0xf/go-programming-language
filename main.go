@@ -140,5 +140,6 @@ func main() {
 	// chapter6_5.UseIntSet()
 
 	// chapter7_4
-	chapter7_4.Sleep()
+	// chapter7_4.Sleep()
+	chapter7_4.TempFlag()
 }
