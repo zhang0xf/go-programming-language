@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter7_4"
+	"exercise/chapter7_5"
 )
 
 func main() {
@@ -141,5 +141,9 @@ func main() {
 
 	// chapter7_4
 	// chapter7_4.Sleep()
-	chapter7_4.TempFlag()
+	// chapter7_4.TempFlag()
+
+	// chapter7_5
+	// chapter7_5.InterfaceValue()
+	chapter7_5.InterfaceValueAndNil()
 }

@@ -14,7 +14,8 @@ import (
 // 在一个接口值中，类型部分代表与之相关类型的描述符。
 
 func InterfaceValue() {
-	var w io.Writer
+	var w io.Writer // interface
+	fmt.Printf("%T\n", w)
 	w.Write([]byte("hello")) // panic: nil pointer dereference
 
 	w = os.Stdout
@@ -25,7 +26,7 @@ func InterfaceValue() {
 	w.Write([]byte("hello")) // writes "hello" to the bytes.Buffers
 
 	w = nil
-	fmt.Printf("%T", w)
+	fmt.Printf("%T\n", w)
 }
 
 // 第一条语句 : var w io.Writer
