@@ -14,17 +14,20 @@ func (p StringSlice) Len() int           { return len(p) }
 func (p StringSlice) Less(i, j int) bool { return p[i] < p[j] }
 func (p StringSlice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 
-func StringSliceSort() {
+// 对字符串切片的排序是很常用的需要，所以sort包提供了StringSlice类型，也提供了Strings函数能让上面这些调用简化成sort.Strings(names)。
 
-	var names StringSlice = make(StringSlice, 0)
-	names = append(names, "zhangfei2")
-	names = append(names, "zhangfei1")
-	names = append(names, "zhangfei3")
-	names = append(names, "zhangfei6")
-	names = append(names, "zhangfei5")
-	names = append(names, "zhangfei4")
+func StringSliceSort() {
+	names := []string{
+		"zhangfei2",
+		"zhangfei1",
+		"zhangfei3",
+		"zhangfei6",
+		"zhangfei5",
+		"zhangfei4",
+	}
 
 	sort.Sort(StringSlice(names))
+	// sort.Strings(names)
 	StringSlicePrint(names)
 }
 
