@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter7_5"
+	"exercise/chapter7_6"
 )
 
 func main() {
@@ -145,5 +145,8 @@ func main() {
 
 	// chapter7_5
 	// chapter7_5.InterfaceValue()
-	chapter7_5.InterfaceValueAndNil()
+	// chapter7_5.InterfaceValueAndNil()
+
+	// chapter7_6
+	chapter7_6.StringSliceSort()
 }
