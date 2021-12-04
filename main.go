@@ -148,5 +148,6 @@ func main() {
 	// chapter7_5.InterfaceValueAndNil()
 
 	// chapter7_6
-	chapter7_6.StringSliceSort()
+	// chapter7_6.StringSliceSort()
+	chapter7_6.Sorting()
 }
