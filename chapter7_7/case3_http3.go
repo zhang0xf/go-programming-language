@@ -49,3 +49,5 @@ func (db database3) price(w http.ResponseWriter, req *http.Request) {
 }
 
 // 为什么有锁？（mux）并行场景？
+// 最后，一个重要的提示：就像我们在1.7节中提到的，web服务器在一个新的协程中调用每一个handler，
+// 所以当handler获取其它协程或者这个handler本身的其它请求也可以访问到变量时，一定要使用预防措施，比如锁机制。
