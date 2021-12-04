@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-// 为了避免方法ServeHTTP重复，新建了database2用以区分database1
+// 为了避免方法ServeHTTP与http1重复，新建了database2用以区分database1
 // usage : ./exercise
 // chrome input : http://localhost:8000/list
 //                http://localhost:8000/price?item=socks
@@ -48,3 +48,7 @@ func (db database2) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		fmt.Fprintf(w, "no such page: %s\n", req.URL)
 	}
 }
+
+// 显然我们可以继续向ServeHTTP方法中添加case，但在一个实际的应用中，将每个case中的逻辑定义到一个分开的方法或函数中会很实用。
+// 此外，相近的URL可能需要相似的逻辑；例如几个图片文件可能有形如/images/*.png的URL。
+// 因为这些原因，net/http包提供了一个请求多路器ServeMux来简化URL和handlers的联系。(见http3)

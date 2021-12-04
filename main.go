@@ -154,5 +154,6 @@ func main() {
 
 	// chapter7_7
 	// chapter7_7.Http1()
-	chapter7_7.Http2()
+	// chapter7_7.Http2()
+	chapter7_7.Http3()
 }
