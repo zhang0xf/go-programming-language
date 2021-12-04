@@ -1,6 +1,8 @@
 package main
 
-import "exercise/chapter4_6"
+import (
+	"exercise/chapter7_7"
+)
 
 func main() {
 	// hello world
@@ -91,7 +93,7 @@ func main() {
 
 	// chapter4_6
 	// chapter4_6.TextTemplate()
-	chapter4_6.HtmlTemplate()
+	// chapter4_6.HtmlTemplate()
 	// chapter4_6.AutoEscape()
 
 	// chapter5_1
@@ -149,4 +151,7 @@ func main() {
 	// chapter7_6.StringSliceSort()
 	// chapter7_6.Sorting()
 	// chapter7_6.CustomSort()
+
+	// chapter7_7
+	chapter7_7.Http1()
 }
