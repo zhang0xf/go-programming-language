@@ -44,7 +44,7 @@ func plot(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "image/svg+xml")
 	surface(w, func(x, y float64) float64 {
 		r := math.Hypot(x, y)                         // distance from (0,0)
-		return expr.Eval(Env{"x": x, "y": y, "r": r}) // 表达式计算，变量x,y,r随着for循环中corner()函数调用每次不同.
+		return expr.Eval(Env{"x": x, "y": y, "r": r}) // 表达式计算，变量x,y,r随着for循环中corner()函数调用每次不同.每次计算只是算出高度z
 	})
 }
 
