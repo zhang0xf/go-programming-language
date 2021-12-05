@@ -1,5 +1,9 @@
 package main
 
+import (
+	"exercise/chapter7_9"
+)
+
 func main() {
 	// hello world
 	// fmt.Println("Hello, World!")
@@ -154,4 +158,5 @@ func main() {
 	// chapter7_7.Http3()
 
 	// chapter7_9
+	chapter7_9.Plot()
 }
