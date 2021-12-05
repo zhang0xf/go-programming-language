@@ -42,6 +42,8 @@ func plot(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "image/svg+xml")
+	// 这个匿名函数和来自原来surface-plotting程序中的固定函数f有相同的签名，但是它计算一个用户提供的表达式。
+	// 环境变量中定义了x，y和半径r。
 	surface(w, func(x, y float64) float64 {
 		r := math.Hypot(x, y)                         // distance from (0,0)
 		return expr.Eval(Env{"x": x, "y": y, "r": r}) // 表达式计算，变量x,y,r随着for循环中corner()函数调用每次不同.每次计算只是算出高度z
