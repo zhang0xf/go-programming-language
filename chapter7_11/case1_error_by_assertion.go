@@ -42,3 +42,6 @@ func IsNotExistError() {
 	_, err := os.Open("/no/such/file")
 	fmt.Println(os.IsNotExist(err)) // "true"
 }
+
+// 如果错误消息结合成一个更大的字符串，当然PathError的结构就不再为人所知，例如通过一个对fmt.Errorf函数的调用。
+// 区别错误通常必须在失败操作后，错误传回调用者前进行。
