@@ -1,6 +1,8 @@
 package main
 
-import "exercise/chapter7_10"
+import (
+	"exercise/chapter7_11"
+)
 
 func main() {
 	// hello world
@@ -161,5 +163,9 @@ func main() {
 	// chapter7_10
 	// chapter7_10.Assertion()
 	// chapter7_10.Assertion2()
-	chapter7_10.Assertion3()
+	// chapter7_10.Assertion3()
+
+	// chapter7_11
+	// chapter7_11.FileOpenError()
+	chapter7_11.IsNotExistError()
 }
