@@ -1,8 +1,10 @@
 package chapter7_11
 
 import (
+	"errors"
 	"fmt"
 	"os"
+	"syscall"
 )
 
 // 基于类型断言区别错误类型
@@ -34,6 +36,19 @@ func FileOpenError() {
 	fmt.Printf("%#v\n", err)
 	// Output:
 	// &os.PathError{Op:"open", Path:"/no/such/file", Err:0x2}
+}
+
+// 源码片段:
+var ErrNotExist = errors.New("file does not exist")
+
+// IsNotExist returns a boolean indicating whether the error is known to
+// report that a file or directory does not exist. It is satisfied by
+// ErrNotExist as well as some syscall errors.
+func IsNotExist(err error) bool {
+	if pe, ok := err.(*PathError); ok { // 断言错误类型
+		err = pe.Err
+	}
+	return err == syscall.ENOENT || err == ErrNotExist
 }
 
 // IsNotExist()应用:
