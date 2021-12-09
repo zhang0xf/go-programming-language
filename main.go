@@ -1,8 +1,6 @@
 package main
 
-import (
-	"exercise/chapter7_14"
-)
+import "exercise/chapter8_1"
 
 func main() {
 	// hello world
@@ -171,5 +169,8 @@ func main() {
 
 	// chapter7_14
 	// chapter1_5.FetchUrl()
-	chapter7_14.Xml()
+	// chapter7_14.Xml()
+
+	// chapter8_1
+	chapter8_1.Spinner()
 }

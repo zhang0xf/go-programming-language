@@ -8,7 +8,7 @@ package chapter8_1
 // 新的goroutine会用go语句来创建。在语法上，go语句是一个普通的函数或方法调用前加上关键字go。
 // go语句会使其语句中的函数在一个新创建的goroutine中运行。而go语句本身会迅速地完成。
 
-func f() // call f(); wait for it to return
+func f() {} // call f(); wait for it to return
 
 func Goroutines() {
 	go f() // create a new goroutine that calls f(); don't wait
