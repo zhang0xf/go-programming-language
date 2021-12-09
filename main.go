@@ -1,6 +1,8 @@
 package main
 
-import "exercise/chapter8_1"
+import (
+	"exercise/chapter8_2"
+)
 
 func main() {
 	// hello world
@@ -172,5 +174,8 @@ func main() {
 	// chapter7_14.Xml()
 
 	// chapter8_1
-	chapter8_1.Spinner()
+	// chapter8_1.Spinner()
+
+	// chapter8_2
+	chapter8_2.Clock1()
 }
