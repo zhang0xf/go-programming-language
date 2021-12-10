@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter8_2"
+	"exercise/chapter8_4"
 )
 
 func main() {
@@ -177,5 +177,9 @@ func main() {
 	// chapter8_1.Spinner()
 
 	// chapter8_2
-	chapter8_2.Clock1()
+	// chapter8_2.Clock1()
+
+	// chapter8_4
+	// chapter8_4.Pipeline1()
+	chapter8_4.Pipeline2()
 }

@@ -49,5 +49,6 @@ func mustCopy(dst io.Writer, src io.Reader) {
 // 关闭网络连接中的写方向的连接将导致server程序收到一个文件（end-of-file）结束的信号。
 // 关闭网络连接中读方向的连接将导致后台goroutine的io.Copy函数调用返回一个“read from closed connection”类似的错误
 // 在后台goroutine返回之前，它先打印一个日志信息，然后向done对应的channel发送一个值。主goroutine在退出前先等待从done对应的channel接收一个值。
+
 // 当我们更希望强调通讯发生的时刻时，我们将它称为消息事件。
 // 有些消息事件并不携带额外的信息，它仅仅是用作两个goroutine之间的同步，这时候我们可以用struct{}空结构体作为channels元素的类型
