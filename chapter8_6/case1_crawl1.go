@@ -8,11 +8,13 @@ import (
 	"gopl.io/ch5/links"
 )
 
+//  usage : ./exercise http://www.baidu.com
+
 // 在5.6节中，我们做了一个简单的web爬虫，用bfs(广度优先)算法来抓取整个网站。
 // 在本节中，我们会让这个爬虫并行化，这样每一个彼此独立的抓取命令可以并行进行IO，最大化利用网络资源。
 // crawl函数和gopl.io/ch5/findlinks3中的是一样的。
 
-func crawl(url string) []string {
+func crawl1(url string) []string {
 	fmt.Println(url)
 	list, err := links.Extract(url)
 	if err != nil {
@@ -29,8 +31,8 @@ func Crawl1() {
 	worklist := make(chan []string)
 
 	// Start with the command-line arguments.
-	// go func() { worklist <- os.Args[1:] }()
-	worklist <- os.Args[1:] // 死锁:主线程写和下面的主线程读,把worklist当成了一个队列
+	go func() { worklist <- os.Args[1:] }()
+	// worklist <- os.Args[1:] // 死锁:需要有其他线程读取worklist。
 
 	// Crawl the web concurrently.
 	seen := make(map[string]bool)
@@ -40,9 +42,12 @@ func Crawl1() {
 				seen[link] = true
 				// 注意这里的crawl所在的goroutine会将link作为一个显式的参数传入，来避免“循环变量快照”的问题(在5.6.1中有讲解)。
 				go func(link string) {
-					// worklist <- crawl(link)
+					worklist <- crawl1(link)
 				}(link)
 			}
 		}
 	}
 }
+
+// 无穷无尽地并行化并不是什么好事情，因为不管怎么说，你的系统总是会有一些个限制因素(会报错)
+// 第二个问题是这个程序永远都不会终止，即使它已经爬到了所有初始链接衍生出的链接。
