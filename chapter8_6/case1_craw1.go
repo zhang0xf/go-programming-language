@@ -25,11 +25,12 @@ func crawl(url string) []string {
 // 像之前一样，一个worklist是一个记录了需要处理的元素的队列，每一个元素都是一个需要抓取的URL列表，不过这一次我们用channel代替slice来做这个队列。
 // 每一个对crawl的调用都会在他们自己的goroutine中进行并且会把他们抓到的链接发送回worklist。
 // 另外注意这里将命令行参数传入worklist也是在一个另外的goroutine中进行的，这是为了避免channel两端的main goroutine与crawler goroutine都尝试向对方发送内容，却没有一端接收内容时发生死锁。
-func Crawl() {
+func Crawl1() {
 	worklist := make(chan []string)
 
 	// Start with the command-line arguments.
-	go func() { worklist <- os.Args[1:] }()
+	// go func() { worklist <- os.Args[1:] }()
+	worklist <- os.Args[1:] // 死锁:主线程写和下面的主线程读,把worklist当成了一个队列
 
 	// Crawl the web concurrently.
 	seen := make(map[string]bool)
@@ -39,7 +40,7 @@ func Crawl() {
 				seen[link] = true
 				// 注意这里的crawl所在的goroutine会将link作为一个显式的参数传入，来避免“循环变量快照”的问题(在5.6.1中有讲解)。
 				go func(link string) {
-					worklist <- crawl(link)
+					// worklist <- crawl(link)
 				}(link)
 			}
 		}
