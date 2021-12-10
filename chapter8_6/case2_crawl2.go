@@ -13,6 +13,7 @@ import (
 // 由于channel里的元素类型并不重要，我们用一个零值的struct{}来作为其元素。
 // 让我们重写crawl函数，将对links.Extract的调用操作用获取、释放token的操作包裹起来，来确保*同一时间*对其只有20个调用。信号量数量和其能操作的IO资源数量应保持接近。
 // 为了使这个程序能够终止，我们需要在worklist为空或者没有crawl的goroutine在运行时退出主循环。
+// 现在这个并发爬虫会比5.6节中的深度优先搜索版快上20倍，而且不会出什么错，并且在其完成任务时也会正确地终止。
 
 // tokens is a counting semaphore used to
 // enforce a limit of 20 concurrent requests.

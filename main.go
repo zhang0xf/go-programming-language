@@ -185,5 +185,6 @@ func main() {
 
 	// chapter8_6
 	// chapter8_6.Crawl1()
-	chapter8_6.Crawl2()
+	// chapter8_6.Crawl2()
+	chapter8_6.Crawl3()
 }
