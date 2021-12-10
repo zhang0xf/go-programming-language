@@ -25,6 +25,8 @@ go env -w GOPROXY=https://goproxy.io,direct
 ### install libraries
 `go get -u golang.org/x/net`
 
+`go get gopl.io/ch8/thumbnail`
+
 ### build project
 
 `go build`
