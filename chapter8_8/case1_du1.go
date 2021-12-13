@@ -8,6 +8,8 @@ import (
 	"path/filepath"
 )
 
+// usage : ./exercise $HOME /usr /bin /etc
+
 // 并发的目录遍历
 
 // 在本小节中，我们会创建一个程序来生成指定目录的硬盘使用情况报告，这个程序和Unix里的du工具比较相似。
