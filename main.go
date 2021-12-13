@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter8_6"
+	"exercise/chapter8_7"
 )
 
 func main() {
@@ -186,5 +186,8 @@ func main() {
 	// chapter8_6
 	// chapter8_6.Crawl1()
 	// chapter8_6.Crawl2()
-	chapter8_6.Crawl3()
+	// chapter8_6.Crawl3()
+
+	// chapter8_7
+	chapter8_7.SelectChannel()
 }
