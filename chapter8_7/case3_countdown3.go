@@ -2,6 +2,7 @@ package chapter8_7
 
 import (
 	"fmt"
+	"os"
 	"time"
 )
 
@@ -16,6 +17,10 @@ import (
 func CountDown3() {
 	// ...create abort channel...
 	abort := make(chan struct{})
+	go func() {
+		os.Stdin.Read(make([]byte, 1)) // read a single byte
+		abort <- struct{}{}
+	}()
 
 	fmt.Println("Commencing countdown.  Press return to abort.")
 	select {

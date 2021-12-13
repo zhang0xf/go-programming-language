@@ -1,8 +1,6 @@
 package main
 
-import (
-	"exercise/chapter8_7"
-)
+import "exercise/chapter8_8"
 
 func main() {
 	// hello world
@@ -189,5 +187,10 @@ func main() {
 	// chapter8_6.Crawl3()
 
 	// chapter8_7
-	chapter8_7.SelectChannel()
+	// chapter8_7.SelectChannel()
+	// chapter8_7.CountDown3()
+	// chapter8_7.CountDown4()
+
+	// chapter8_8
+	chapter8_8.Du1()
 }
