@@ -195,5 +195,6 @@ func main() {
 
 	// chapter8_8
 	// chapter8_8.Du1()
-	chapter8_8.Du2()
+	// chapter8_8.Du2()
+	chapter8_8.Du3()
 }
