@@ -88,7 +88,7 @@ loop:
 // walkDir这个goroutine一启动就会轮询取消状态，如果取消状态被设置的话会直接返回，并且不做额外的事情。
 // 这样我们将所有在取消事件之后创建的goroutine改变为无操作。
 // 在walkDir函数的循环中我们对取消状态进行轮询可以带来明显的益处，可以避免在取消事件发生时还去创建goroutine。
-func walkDir(dir string, n *sync.WaitGroup, fileSizes chan<- int64) { // 递归
+func walkDir(dir string, n *sync.WaitGroup, fileSizes chan<- int64) {
 	defer n.Done()
 	if cancelled() {
 		return
@@ -135,3 +135,10 @@ func dirents(dir string) []os.FileInfo {
 func printDiskUsage(nfiles, nbytes int64) {
 	fmt.Printf("%d files  %.1f GB\n", nfiles, float64(nbytes)/1e9)
 }
+
+// 现在当取消发生时，所有后台的goroutine都会迅速停止并且主函数会返回。
+// 当然，当主函数返回时，一个程序会退出，而我们又无法在主函数退出的时候确认其已经释放了所有的资源
+// 取代掉直接从主函数返回，我们调用一个panic，然后runtime会把每一个goroutine的栈dump下来。
+// 如果main goroutine是唯一一个剩下的goroutine的话，他会清理掉自己的一切资源。
+// 但是如果还有其它的goroutine没有退出，他们可能没办法被正确地取消掉，也有可能被取消但是取消操作会很花时间；所以这里的一个调研还是很有必要的。
+// 我们用panic来获取到足够的信息来验证我们上面的判断，看看最终到底是什么样的情况。
