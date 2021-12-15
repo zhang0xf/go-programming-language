@@ -6,10 +6,6 @@ import (
 	"net"
 )
 
-// usage : 需要多个进程
-// ./exercise 启动服务器
-// 使用netcat做客户端来聊天
-
 // handleConn函数会为它的客户端创建一个消息发送channel并通过entering channel来通知客户端的到来。
 // 然后它会读取客户端发来的每一行文本，并通过全局的消息channel来将这些文本发送出去，并为每条消息带上发送者的前缀来标明消息身份。
 // 当客户端发送完毕后，handleConn会通过leaving这个channel来通知客户端的离开并关闭连接。
