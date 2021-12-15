@@ -1,8 +1,6 @@
 package main
 
-import (
-	"exercise/chapter8_9"
-)
+import "exercise/chapter9_1"
 
 func main() {
 	// hello world
@@ -199,5 +197,8 @@ func main() {
 	// chapter8_8.Du3()
 
 	// chapter8_9
-	chapter8_9.Du4()
+	// chapter8_9.Du4()
+
+	// chapter9_1
+	chapter9_1.RaceCondition()
 }
