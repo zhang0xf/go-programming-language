@@ -7,8 +7,8 @@ package chapter9_1
 var deposits = make(chan int) // send amount to deposit
 var balances = make(chan int) // receive balance
 
-func Deposit2(amount int) { deposits <- amount }
-func Balance2() int       { return <-balances }
+func Deposit1(amount int) { deposits <- amount }
+func Balance1() int       { return <-balances }
 
 func teller() {
 	var balance int // balance is confined to teller goroutine
