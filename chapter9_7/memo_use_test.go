@@ -143,6 +143,12 @@ func TestMemoUse4(t *testing.T) {
 // 然而Memo类型现在包含了一个叫做requests的channel，Get的调用方用这个channel来和monitor goroutine来通信。
 // requests channel中的元素类型是request。Get的调用方会把这个结构中的两组key都填充好，实际上用这两个变量来对函数进行缓存的。
 // 另一个叫response的channel会被拿来发送响应结果。这个channel只会传回一个单独的值。
+// cache变量被限制在了monitor goroutine `(*Memo).server中，下面会看到。
+// monitor会在循环中一直读取请求，直到request channel被Close方法关闭。
+// 每一个请求都会去查询cache，如果没有找到条目的话，那么就会创建/插入一个新的条目。
+// 对call和deliver方法的调用必须让它们在自己的goroutine中进行以确保monitor goroutines不会因此而被阻塞住而没法处理新的请求。
+// 这个例子说明我们无论用上锁，还是通信来建立并发程序都是可行的。
+// 上面的两种方案并不好说特定情境下哪种更好，不过了解他们还是有价值的。有时候从一种方式切换到另一种可以使你的代码更为简洁。
 func TestMemoUse5(t *testing.T) {
 	m := New5(httpGetBody)
 	var n sync.WaitGroup
