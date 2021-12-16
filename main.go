@@ -1,8 +1,6 @@
 package main
 
-import (
-	"exercise/chapter9_4"
-)
+import "exercise/chapter9_5"
 
 func main() {
 	// hello world
@@ -205,5 +203,8 @@ func main() {
 	// chapter9_1.RaceCondition()
 
 	// chapter9_4
-	chapter9_4.MemorySync()
+	// chapter9_4.MemorySync()
+
+	// chapter9_5
+	chapter9_5.Icon3("")
 }
