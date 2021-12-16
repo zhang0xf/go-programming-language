@@ -8,25 +8,17 @@ package chapter9_7
 // 继续下去我们会展示一些Memo的变种，不过所有的例子都会遵循上面的这些方面。
 
 // A Memo caches the results of calling a Func.
-type Memo struct {
+type Memo1 struct {
 	f     Func
 	cache map[string]result
 }
 
-// Func is the type of the function to memoize.
-type Func func(key string) (interface{}, error)
-
-type result struct {
-	value interface{}
-	err   error
-}
-
-func New(f Func) *Memo {
-	return &Memo{f: f, cache: make(map[string]result)}
+func New1(f Func) *Memo1 {
+	return &Memo1{f: f, cache: make(map[string]result)}
 }
 
 // NOTE: not concurrency-safe!
-func (memo *Memo) Get(key string) (interface{}, error) {
+func (memo *Memo1) Get(key string) (interface{}, error) {
 	res, ok := memo.cache[key]
 	if !ok {
 		res.value, res.err = memo.f(key)

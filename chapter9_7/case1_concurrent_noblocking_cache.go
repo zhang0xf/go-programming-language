@@ -20,3 +20,20 @@ func httpGetBody(url string) (interface{}, error) {
 	defer resp.Body.Close()
 	return ioutil.ReadAll(resp.Body)
 }
+
+func incomingURLs() []string {
+	var urls []string = make([]string, 0)
+	urls = append(urls, "http://www.baidu.com")
+	urls = append(urls, "http://www.baidu.com") // 相同的url用于测试函数结果缓存效果
+	urls = append(urls, "http://www.google.com")
+	urls = append(urls, "http://www.bilibili.com")
+	return urls
+}
+
+// Func is the type of the function to memoize.
+type Func func(key string) (interface{}, error)
+
+type result struct {
+	value interface{}
+	err   error
+}

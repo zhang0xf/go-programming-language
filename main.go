@@ -1,7 +1,5 @@
 package main
 
-import "exercise/chapter9_5"
-
 func main() {
 	// hello world
 	// fmt.Println("Hello, World!")
@@ -206,5 +204,8 @@ func main() {
 	// chapter9_4.MemorySync()
 
 	// chapter9_5
-	chapter9_5.Icon3("")
+	// chapter9_5.Icon3("")
+
+	// chapter9_7
+	// 本章节改用go test来测试案例
 }
