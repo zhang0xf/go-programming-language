@@ -139,3 +139,25 @@ func TestMemoUse4(t *testing.T) {
 	}
 	n.Wait()
 }
+
+// 然而Memo类型现在包含了一个叫做requests的channel，Get的调用方用这个channel来和monitor goroutine来通信。
+// requests channel中的元素类型是request。Get的调用方会把这个结构中的两组key都填充好，实际上用这两个变量来对函数进行缓存的。
+// 另一个叫response的channel会被拿来发送响应结果。这个channel只会传回一个单独的值。
+func TestMemoUse5(t *testing.T) {
+	m := New5(httpGetBody)
+	var n sync.WaitGroup
+	for _, url := range incomingURLs() {
+		n.Add(1)
+		go func(url string) {
+			start := time.Now()
+			value, err := m.Get(url)
+			if err != nil {
+				log.Print(err)
+			}
+			fmt.Printf("%s, %s, %d bytes\n",
+				url, time.Since(start), len(value.([]byte)))
+			n.Done()
+		}(url)
+	}
+	n.Wait()
+}

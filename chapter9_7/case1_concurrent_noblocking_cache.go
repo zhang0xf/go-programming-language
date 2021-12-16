@@ -25,7 +25,7 @@ func incomingURLs() []string {
 	var urls []string = make([]string, 0)
 	urls = append(urls, "http://www.baidu.com")
 	urls = append(urls, "http://www.baidu.com") // 相同的url用于测试函数结果缓存效果
-	urls = append(urls, "http://www.google.com")
+	// urls = append(urls, "http://www.google.com")
 	urls = append(urls, "http://www.bilibili.com")
 	return urls
 }
