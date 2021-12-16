@@ -30,6 +30,7 @@ func incomingURLs() []string {
 	return urls
 }
 
+// 包级类型定义:
 // Func is the type of the function to memoize.
 type Func func(key string) (interface{}, error)
 
