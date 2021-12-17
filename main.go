@@ -1,5 +1,9 @@
 package main
 
+import (
+	"exercise/chapter10_5"
+)
+
 func main() {
 	// hello world
 	// fmt.Println("Hello, World!")
@@ -208,4 +212,7 @@ func main() {
 
 	// chapter9_7
 	// 本章节改用go test来测试案例
+
+	// chapter10_5
+	chapter10_5.JPEG()
 }
