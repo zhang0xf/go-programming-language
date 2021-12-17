@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter10_5"
+	"exercise/chapter10_7"
 )
 
 func main() {
@@ -214,5 +214,8 @@ func main() {
 	// 本章节改用go test来测试案例
 
 	// chapter10_5
-	chapter10_5.JPEG()
+	// chapter10_5.JPEG()
+
+	// chapter10_7
+	chapter10_7.Cross()
 }
