@@ -77,3 +77,5 @@ package chapter10_7
 // compress/gzip -> bufio compress/flate errors fmt hash hash/crc32 io time
 // compress/lzw -> bufio errors fmt io
 // compress/zlib -> bufio compress/flate errors fmt hash hash/adler32 io
+
+// go list命令对于一次性的交互式查询或自动化构建或测试脚本都很有帮助。
