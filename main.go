@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter10_7"
+	"exercise/chapter11_2"
 )
 
 func main() {
@@ -217,5 +217,8 @@ func main() {
 	// chapter10_5.JPEG()
 
 	// chapter10_7
-	chapter10_7.Cross()
+	// chapter10_7.Cross()
+
+	// chapter11_2
+	chapter11_2.Echo()
 }
