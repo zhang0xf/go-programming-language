@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter11_2"
+	"exercise/chapter12_2"
 )
 
 func main() {
@@ -220,5 +220,11 @@ func main() {
 	// chapter10_7.Cross()
 
 	// chapter11_2
-	chapter11_2.Echo()
+	// chapter11_2.Echo()
+
+	// chapter12_2
+	// chapter12_2.ReflectType()
+	// chapter12_2.ReflectValue()
+	// chapter12_2.ReflectValue2()
+	chapter12_2.FormatAny()
 }
