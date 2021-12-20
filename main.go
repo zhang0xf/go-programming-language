@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter12_2"
+	"exercise/chapter12_3"
 )
 
 func main() {
@@ -226,5 +226,12 @@ func main() {
 	// chapter12_2.ReflectType()
 	// chapter12_2.ReflectValue()
 	// chapter12_2.ReflectValue2()
-	chapter12_2.FormatAny()
+	// chapter12_2.FormatAny()
+
+	// chapter12_3
+	// chapter12_3.DispLaySyntaxTree()
+	// chapter12_3.DisplayMovie()
+	// chapter12_3.DisplayStdLibStruct()
+	// chapter12_3.DisplayReflectValue()
+	chapter12_3.DiffTwoDisplay()
 }
