@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter13_1"
+	"exercise/chapter13_2"
 )
 
 func main() {
@@ -254,6 +254,8 @@ func main() {
 	// chapter12_9.PrintfExample()
 
 	// chapter13_1
-	chapter13_1.UnSafeSizeof()
+	// chapter13_1.UnSafeSizeof()
 
+	// chapter13_2
+	chapter13_2.UnsafePointer()
 }
