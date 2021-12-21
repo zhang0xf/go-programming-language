@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter12_8"
+	"exercise/chapter12_9"
 )
 
 func main() {
@@ -248,6 +248,9 @@ func main() {
 	// chapter12_6.DecodeMovie()
 
 	// chapter12_8
-	chapter12_8.PrintMethods()
+	// chapter12_8.PrintMethods()
+
+	// chapter12_9
+	chapter12_9.PrintfExample()
 
 }
