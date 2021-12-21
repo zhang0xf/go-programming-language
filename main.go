@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter12_5"
+	"exercise/chapter12_6"
 )
 
 func main() {
@@ -242,5 +242,9 @@ func main() {
 	// chapter12_5.ReflectValueChange2()
 	// chapter12_5.ReflectValueChange3()
 	// chapter12_5.ReflectValueChange7()
-	chapter12_5.ReflectValueChange8()
+	// chapter12_5.ReflectValueChange8()
+
+	// chapter12_6
+	chapter12_6.DecodeMovie()
+
 }
