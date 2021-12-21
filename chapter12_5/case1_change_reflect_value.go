@@ -2,6 +2,7 @@ package chapter12_5
 
 import (
 	"fmt"
+	"os"
 	"reflect"
 )
 
@@ -54,3 +55,91 @@ func ReflectValueCanAddr() {
 // 然后是在Value上调用Interface()方法，也就是返回一个interface{}，里面包含指向变量的指针。
 // 最后，如果我们知道变量的类型，我们可以使用类型的断言机制将得到的interface{}类型的接口强制转为普通的类型指针。
 // 这样我们就可以通过这个普通指针来更新变量了：
+
+func ReflectValueChange() {
+	x := 2
+	d := reflect.ValueOf(&x).Elem()   // d refers to the variable x
+	px := d.Addr().Interface().(*int) // px := &x
+	*px = 3                           // x = 3
+	fmt.Println(x)                    // "3"
+}
+
+// 或者，不使用指针，而是通过调用可取地址的reflect.Value的reflect.Value.Set方法来更新对应的值：
+
+func ReflectValueChange2() {
+	x := 2
+	d := reflect.ValueOf(&x).Elem() // d refers to the variable x
+	d.Set(reflect.ValueOf(4))
+	fmt.Println(x) // "4"
+}
+
+// Set方法将在运行时执行和编译时进行类似的可赋值性约束的检查。
+// 以上代码，变量和值都是int类型，但是如果变量是int64类型，那么程序将抛出一个panic异常，所以关键问题是要确保改类型的变量可以接受对应的值：
+
+func ReflectValueChange3() {
+	x := 2
+	d := reflect.ValueOf(&x).Elem()  // d refers to the variable x
+	d.Set(reflect.ValueOf(int64(5))) // panic: int64 is not assignable to int
+	fmt.Println(x)
+}
+
+// 同样，对一个不可取地址的reflect.Value调用Set方法也会导致panic异常：
+
+func ReflectValueChange4() {
+	x := 2
+	b := reflect.ValueOf(x)
+	b.Set(reflect.ValueOf(3)) // panic: Set using unaddressable value
+}
+
+// 这里有很多用于基本数据类型的Set方法：SetInt、SetUint、SetString和SetFloat等。
+
+func ReflectValueChange5() {
+	x := 2
+	d := reflect.ValueOf(&x).Elem()
+	d.SetInt(3)
+	fmt.Println(x) // "3"
+}
+
+// 从某种程度上说，这些Set方法总是尽可能地完成任务。
+// 以SetInt为例，只要变量是某种类型的有符号整数就可以工作，即使是一些命名的类型、甚至只要底层数据类型是有符号整数就可以，而且如果对于变量类型值太大的话会被自动截断。
+// 但需要谨慎的是：对于一个引用interface{}类型的reflect.Value调用SetInt会导致panic异常，即使那个interface{}变量对于整数类型也不行。
+
+func ReflectValueChange6() {
+	x := 1
+	rx := reflect.ValueOf(&x).Elem()
+	rx.SetInt(2)                     // OK, x = 2
+	rx.Set(reflect.ValueOf(3))       // OK, x = 3
+	rx.SetString("hello")            // panic: string is not assignable to int
+	rx.Set(reflect.ValueOf("hello")) // panic: string is not assignable to int
+
+	var y interface{}
+	ry := reflect.ValueOf(&y).Elem()
+	ry.SetInt(2)                     // panic: SetInt called on interface Value
+	ry.Set(reflect.ValueOf(3))       // OK, y = int(3)
+	ry.SetString("hello")            // panic: SetString called on interface Value
+	ry.Set(reflect.ValueOf("hello")) // OK, y = "hello"
+}
+
+// 当我们用Display显示os.Stdout结构时，我们发现反射可以越过Go语言的导出规则的限制读取结构体中未导出的成员，比如在类Unix系统上os.File结构体中的fd int成员。
+// 然而，利用反射机制并不能修改这些未导出的成员：
+
+func ReflectValueChange7() {
+	stdout := reflect.ValueOf(os.Stdout).Elem() // *os.Stdout, an os.File var
+	fmt.Println(stdout.Type())                  // "os.File"
+	fmt.Println(stdout.CanAddr())               // true
+	fd := stdout.FieldByName("fd")
+	fmt.Println(fd.CanAddr()) // false
+	fmt.Println(fd.Int())     // "1"
+	fd.SetInt(2)              // panic: unexported field
+}
+
+// 一个可取地址的reflect.Value会记录一个结构体成员是否是未导出成员，如果是的话则拒绝修改操作。
+// 因此，CanAddr方法并不能正确反映一个变量是否是可以被修改的。
+// 另一个相关的方法CanSet是用于检查对应的reflect.Value是否是可取地址并可被修改的：
+
+func ReflectValueChange8() {
+	stdout := reflect.ValueOf(os.Stdout).Elem() // *os.Stdout, an os.File var
+	fmt.Println(stdout.Type())                  // "os.File"
+	fd := stdout.FieldByName("fd")
+	fmt.Println(fd.CanAddr(), fd.CanSet()) // "true false" (注:实际测试结果均为false,是否和go版本有关?)
+}
