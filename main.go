@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter13_3"
+	"exercise/chapter13_4"
 )
 
 func main() {
@@ -262,5 +262,8 @@ func main() {
 
 	// chapter13_3
 	// chapter13_3.UseEqual()
-	chapter13_3.UseEqualwithCircular()
+	// chapter13_3.UseEqualwithCircular()
+
+	// chapter13_4
+	chapter13_4.Bzipper()
 }
