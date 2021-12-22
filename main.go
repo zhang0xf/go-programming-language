@@ -1,7 +1,7 @@
 package main
 
 import (
-	"exercise/chapter13_2"
+	"exercise/chapter13_3"
 )
 
 func main() {
@@ -258,5 +258,9 @@ func main() {
 
 	// chapter13_2
 	// chapter13_2.UnsafePointer()
-	chapter13_2.UnsafePointer2()
+	// chapter13_2.UnsafePointer2()
+
+	// chapter13_3
+	// chapter13_3.UseEqual()
+	chapter13_3.UseEqualwithCircular()
 }
