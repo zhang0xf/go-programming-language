@@ -257,5 +257,6 @@ func main() {
 	// chapter13_1.UnSafeSizeof()
 
 	// chapter13_2
-	chapter13_2.UnsafePointer()
+	// chapter13_2.UnsafePointer()
+	chapter13_2.UnsafePointer2()
 }
