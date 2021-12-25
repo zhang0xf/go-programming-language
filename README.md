@@ -27,7 +27,7 @@ go env -w GOPROXY=https://goproxy.io,direct
 
 `go get gopl.io/ch8/thumbnail`
 
-`sudo apt-get install libbz2-dev` : 用于go调用c库
+`sudo apt-get install libbz2-dev` : 用于go调用c库（windows环境复杂，很多库安装不方便。另见：[WSL + vscode](https://github.com/zhang0xf/md/blob/main/WSL/WSL.md)）
 
 ### build project
 
