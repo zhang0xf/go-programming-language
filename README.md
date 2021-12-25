@@ -27,6 +27,8 @@ go env -w GOPROXY=https://goproxy.io,direct
 
 `go get gopl.io/ch8/thumbnail`
 
+`sudo apt-get install libbz2-dev` : 用于go调用c库
+
 ### build project
 
 `go build`
