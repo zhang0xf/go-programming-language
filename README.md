@@ -11,7 +11,7 @@ the go programming language exercise
 
 `go --version`
 
-### change proxy for vscode
+### change proxy
 
 ```
 go env -w GO111MODULE=on
