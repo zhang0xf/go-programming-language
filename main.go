@@ -1,15 +1,13 @@
 package main
 
-import (
-	"exercise/chapter13_4"
-)
+import "exercise/chapter01/chapter1_2"
 
 func main() {
 	// hello world
 	// fmt.Println("Hello, World!")
 
 	// chapter1_2
-	// chapter1_2.PrintArgsByFor()
+	chapter1_2.PrintArgsByFor()
 	// chapter1_2.PrintArgsByRange()
 	// chapter1_2.PrintArgsByJoin()
 	// chapter1_2.PrintArgsDefault()
@@ -265,5 +263,5 @@ func main() {
 	// chapter13_3.UseEqualwithCircular()
 
 	// chapter13_4
-	chapter13_4.Bzipper()
+	// chapter13_4.Bzipper()
 }
