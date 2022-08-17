@@ -1,7 +1,7 @@
 package chapter11_6
 
 import (
-	"exercise/chapter11_2"
+	"exercise/chapter11/chapter11_2"
 	"fmt"
 )
 

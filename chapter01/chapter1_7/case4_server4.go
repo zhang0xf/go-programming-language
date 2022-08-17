@@ -1,7 +1,7 @@
 package chapter1_7
 
 import (
-	"exercise/chapter1_4"
+	"exercise/chapter01/chapter1_4"
 	"log"
 	"net/http"
 )

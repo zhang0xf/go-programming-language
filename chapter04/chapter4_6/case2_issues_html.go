@@ -1,7 +1,7 @@
 package chapter4_6
 
 import (
-	"exercise/chapter4_5"
+	"exercise/chapter04/chapter4_5"
 	"html/template"
 	"log"
 	"os"

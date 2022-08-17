@@ -3,7 +3,7 @@ package chapter12_6
 import (
 	"bytes"
 	"encoding/json"
-	"exercise/chapter12_4"
+	"exercise/chapter12/chapter12_4"
 	"fmt"
 	"reflect"
 	"strconv"

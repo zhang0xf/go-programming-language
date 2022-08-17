@@ -1,7 +1,7 @@
 package chapter12_3
 
 import (
-	"exercise/chapter7_9"
+	"exercise/chapter07/chapter7_9"
 	"fmt"
 	"reflect"
 	"strconv"
